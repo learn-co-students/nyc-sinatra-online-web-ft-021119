@@ -1,5 +1,13 @@
 
 <%=@figure.name %>
+<br>
 
-<a href="figures/<%=@figure.id%>/edit">
+<% Title.all.each do |title| %>
+  Title: <%=title.name %>
+<%end%>
+<br>
+<% Landmark.all.each do |landmark| %>
+  Landmark: <%=landmark.name %>
+<%end%>
+<a href="figures/<%=@figure.id%>/edit">Edit
 </a>
